@@ -1,0 +1,74 @@
+OK
+
+NO CARRIER
+
+OK
+
+OK
+
++CPIN: READY
+
+OK
+
++CREG: 0,5
+
+OK
+
++CSQ: 25,0
+
+OK
+
++COPS: 0,0,"MEDI TELECOM"
+
+OK
+
+OK
+**************************************************************************************
+APN Configuration and GPRS Test
+
+OK
+
+OK
+
+ERROR
+
++SAPBR: 1,1,"10.145.231.2"
+
+OK
+
+ERROR
+
+OK
+
+OK
+
+OK
+
+OK
+
+ERROR
+
++HTTPACTION: 0,301,219
+OK
+
+OK
+
+ERROR
+
++SAPBR: 1,1,"10.145.231.2"
+
+OK
+
+ERROR
+
+OK
+
+OK
+
+OK
+
+OK
+
+ERROR
+
++HTTPACTION: 0,301,219

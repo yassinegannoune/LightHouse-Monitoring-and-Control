@@ -1,0 +1,55 @@
+#include <SoftwareSerial.h>
+
+SoftwareSerial sim808(10, 11);  // RX, TX
+
+void setup() {
+    Serial.begin(9600);
+    sim808.begin(9600);
+
+    delay(1000);
+    Serial.println("Sending Telemetry Data to ThingsBoard");
+}
+
+void loop() {
+    // Establish cellular connection (assuming you've already configured the APN)
+    sim808.println("AT+SAPBR=1,1"); // Activate GPRS context
+    delay(1000);
+    while (sim808.available()) {
+        char c = sim808.read();
+        Serial.write(c);
+    }
+
+    // Format telemetry data in JSON
+    String telemetryData = "{\"temp\": 200, \"humidity\": 25}";
+
+    // Create HTTP POST request
+    String httpRequest = "POST /api/v1/97x6bTouG3w9kJHJ3ddC/telemetry HTTP/1.1\r\n";
+    httpRequest += "Host: thingsboard.cloud\r\n";
+    httpRequest += "Content-Type: application/json\r\n";
+    httpRequest += "Content-Length: " + String(telemetryData.length()) + "\r\n\r\n";
+    httpRequest += telemetryData;
+
+    // Send HTTP request
+    sim808.println("AT+HTTPINIT");
+    delay(1000);
+    sim808.println("AT+HTTPPARA=\"CID\",1");
+    delay(1000);
+    sim808.println("AT+HTTPPARA=\"URL\",\"thingsboard.cloud/api/v1/97x6bTouG3w9kJHJ3ddC/telemetry\"");
+    delay(1000);
+    sim808.println("AT+HTTPPARA=\"CONTENT\",\"application/json\"");
+    delay(1000);
+    sim808.println("AT+HTTPDATA=" + String(httpRequest.length()) + ",30000");
+    delay(1000);
+    sim808.println(httpRequest);
+    delay(5000); // Wait for response
+
+    // Terminate HTTP session
+    sim808.println("AT+HTTPTERM");
+    delay(1000);
+
+    // Deactivate GPRS context
+    sim808.println("AT+SAPBR=0,1");
+    delay(1000);
+
+    delay(10000); // Wait before looping again
+}

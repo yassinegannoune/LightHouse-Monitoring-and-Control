@@ -1,0 +1,10 @@
+*SIM808 module
+*power adapter supply ( 3.4 to 4.4V.) for sim808
+*ESP8266 or Arduino mega+cable(depends on the library that can be used for sim808)
+*GPS/GSM antenna
+*LDR  sesnor(light sensor)
+*jumper_wires 
+****************************************************************************
+--->12v dc relay module(for controlling either automatically/manually the board)
+---->220v AC relay module for the menara power source for the main and secondary light control.
+---->Switch for manual control

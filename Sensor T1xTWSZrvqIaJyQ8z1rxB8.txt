@@ -1,0 +1,16 @@
+Sensor T1:xTWSZrvqIaJyQ8z1rxB8   
+Sensor C1:BNuLCWwGi0NNWEm2d3qF:Customer D
+curl -v -X POST -d "{\"temperature\":  60, \"humidity\":  73}" thingsboard.cloud/api/v1/BNuLCWwGi0NNWEm2d3qF/telemetry --header "Content-Type:application/json"
+33.85745982993062, -5.554520089915638
+temperatureAlarmThreshold
+temperatureAlarmFlag
+---------------------------------------------------------------------------------------------------------------
+temperature_sensor_1:97x6bTouG3w9kJHJ3ddC
+curl -v -X POST -d "{\"temp\":  60, \"humidity\":  73}" thingsboard.cloud/api/v1/97x6bTouG3w9kJHJ3ddC/telemetry --header "Content-Type:application/json"
+-------------------------------------------------
+tG30w61cdHyCZG9cOBSG
+curl -v -X POST -d "{\"staus\":  active}" thingsboard.cloud/api/v1/tG30w61cdHyCZG9cOBSG/telemetry --header "Content-Type:application/json"
+------------------
+<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}<br/><b>Temperature:</b> ${temperature} °C<br/><br/><link-act name="navigate_to_details">Sensor details</link-act><br/>
+----------------------------------------------------------------------------------------------------------
+<b>${entityName}</b><br/><br/><b>Temperature:</b> ${temperature:1} °C<br/><b>Humidity:</b> ${humidity:0} %<br/><br/><link-act name="navigate_to_details">Sensor details</link-act><br/>
