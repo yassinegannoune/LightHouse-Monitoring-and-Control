@@ -1,4 +1,4 @@
-![profile1](https://github.com/user-attachments/assets/0da8725e-8b70-4d56-b087-c30ebe710fc4)
+![profile1](https://github.com/user-attachments/assets/c7a334fb-1478-4d87-ae78-a742d51cdf56)
 
 # **Lighthouse - IoT Monitoring System for Lighthouse State**
 
@@ -31,10 +31,10 @@ The project aims to provide a cost-effective and reliable solution to remotely m
 
 4. **ThingsBoard Platform**  
    - Data is sent to ThingsBoard, which acts as the central monitoring and control hub. MQTT data is formatted in JSON and transmitted under specific topics to ThingsBoard, allowing for seamless integration.
-    ![data_full](https://github.com/user-attachments/assets/ca87851b-6b1f-46d3-b898-761781d36820)
+    ![data_full](https://github.com/user-attachments/assets/48f7d578-c732-4a47-bbe6-dd7b66a25cb2)
 5. **Alarm Notification System**  
    - The alarm system is configured within ThingsBoard to alert operators via email when critical thresholds or malfunctions are detected, ensuring rapid response.
-     ![email_notice](https://github.com/user-attachments/assets/ee68ffd8-df3d-4622-bc40-52105fd2438d)
+     ![email_notice](https://github.com/user-attachments/assets/37d785a2-4b84-4a62-9ab8-e772b8d3b6c7)
 
 
 ### **Project Phases**
