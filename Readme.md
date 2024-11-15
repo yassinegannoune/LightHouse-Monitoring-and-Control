@@ -63,7 +63,7 @@ To begin with the *Lighthouse* project, you will need:
 ### **Setup Instructions**
 1. **Clone the Repository**:  
    ```bash
-   git clone https://github.com/your-username/lighthouse](https://github.com/yassinegannoune/LIghtHouse-Monitoring.git)
+   git clone https://github.com/yassinegannoune/LightHouse-Monitoring-and-Control.git)
    
 2. **Install Dependencies**:
    - Install required libraries for sensor interfacing, LTE communication, and MQTT protocol.
